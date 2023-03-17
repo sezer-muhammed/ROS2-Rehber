@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lipsum} % Örnek metin için
+
+% Sayfa kenar boşluklarını ayarlama
+\geometry{
+ left=30mm,
+ right=25mm,
+ top=35mm,
+ bottom=25mm
+}
+
+% Başlık stilini ayarlama
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Muhammed Sezer}
+\chead{\leftmark}
+\rhead{\thepage}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\begin{document}
+
+\tableofcontents
+
+% İçerik
+\input{01_giris.tex}
+\input{02_ros2_bilesenleri_ve_mimarisi.tex}
+\input{03_ileri_duzey_paket_olusturma_ve_yonetimi.tex}
+\input{04_ros2_guvenlik_sros2.tex}
+\input{05_ros2_ve_python_ile_test_ve_entegrasyon.tex}
+\input{06_ros2_ve_gercek_zamanli_sistemler.tex}
+\input{07_ileri_duzey_tf2_kullanimi_ve_optimizasyon.tex}
+\input{08_ros2_ile_simulasyon_ve_donanim_entegrasyonu.tex}
+\input{09_ileri_duzey_araclar_ve_kullanimlari.tex}
+\input{10_ileri_duzey_ros2_uygulamalari_ve_ornek_projeler.tex}
+\input{11_ozet_ve_sonuc.tex}
+
+\end{document}
