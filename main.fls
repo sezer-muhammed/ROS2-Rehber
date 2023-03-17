@@ -184,13 +184,13 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+OUTPUT main.pdf
+INPUT c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 OUTPUT main.toc
 INPUT ./01_giris.tex
 INPUT 01_giris.tex
 INPUT ./01_giris.tex
 INPUT 01_giris.tex
-OUTPUT main.pdf
-INPUT c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
