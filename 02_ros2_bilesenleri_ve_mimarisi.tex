@@ -1,28 +1,92 @@
-% 02_ros2_bilesenleri_ve_mimarisi.tex
 \chapter{ROS2 Bileşenleri ve Mimarisi}
 
 \section{ROS2'nin Temel Bileşenleri ve İleri Düzey Kullanımı}
 \subsection{Node'lar, Topic'ler, Service'ler ve Action'lar}
+Node'lar, ROS2 sisteminin temel yapı taşlarıdır ve her biri, robotik uygulamanızın belirli bir görevini yerine getirir. Bu görevler, veri işleme, sensör okumaları veya hareket planlaması gibi çeşitli işlemler olabilir. Topic'ler, node'ların birbirleriyle veri paylaşmalarına olanak tanırken, service'ler ve action'lar daha karmaşık istek/yanıt ve uzun süreli etkileşimler için kullanılır.
+
+\begin{figure}[h]
+\centering
+% \includegraphics{ornek_gorsel.png}
+\caption{Node'lar, topic'ler, service'ler ve action'lar arasındaki ilişki (Burada görselde node'lar, topic'ler, service'ler ve action'lar arasındaki ilişkiyi gösteren bir akış diyagramı kullanılmalıdır)}
+\end{figure}
+
 \subsubsection{İleri Düzey Node Kullanımı}
-\lipsum[1] % Örnek metin için, gerçek içerikle değiştirin
+İleri düzey node kullanımı, performansı ve kaynak kullanımını optimize etmek için node içerisindeki işlemlerin düzenlenmesi ve node'lar arası iletişimin iyileştirilmesi üzerinde durur. Bunun için, iş parçacığı yönetimi ve eşzamanlı işleme gibi teknikler kullanılabilir. Ayrıca, node'lar arası iletişimin güvenliğini ve performansını artırmak için ROS2'nin sunduğu güvenlik ve QoS özelliklerinden yararlanılabilir.
+
+İlginç bir not olarak, ROS2 geliştirilirken, özellikle node'ların performansını artırmaya yönelik bazı iyileştirmeler yapıldı. Bu iyileştirmeler, özellikle gerçek zamanlı sistemler ve büyük ölçekli robotik projeler için önemliydi.
 
 \subsubsection{Etkin Topic ve Mesaj İşleme}
-\lipsum[2] % Örnek metin için, gerçek içerikle değiştirin
+Etkin topic ve mesaj işleme, büyük veri setleriyle çalışırken ve verilerin doğru bir şekilde filtrelenmesi ve işlenmesi gerektiğinde önemlidir. Bu bağlamda, veri işleme stratejileri ve veri filtreleme teknikleri uygulanarak, istenmeyen verilerin sistem üzerinde gereksiz yük oluşturmasının önüne geçilebilir.
+
+2007 yılında, Willow Garage tarafından ROS'un ilk versiyonu geliştirildiğinde, hedef, daha etkili ve hızlı veri paylaşımına olanak sağlayan bir robotik altyapı oluşturmaktı. O günden bu yana, ROS ve ROS2'nin veri işleme ve iletişim özellikleri büyük ölçüde geliştirildi
 
 \subsection{Kompozit ve Lifecycle Node'lar}
+Kompozit ve lifecycle node'lar, ROS2 sisteminin modülerliğini ve esnekliğini artırmaya yönelik olarak geliştirilen iki önemli kavramdır. Bu kavramlar sayesinde, robotik uygulamalar daha etkin bir şekilde yönetilir ve geliştirilir.
+
 \subsubsection{Kompozit Node Kavramı ve Kullanımı}
-\lipsum[3] % Örnek metin için, gerçek içerikle değiştirin
+Kompozit node'lar, birden fazla node'un tek bir süreç içerisinde çalıştırılmasını sağlar. Bu, sistem kaynaklarının daha verimli kullanılmasına ve performansın artırılmasına yardımcı olur. Ayrıca, kompozit node'lar sayesinde, benzer işlevlere sahip node'lar gruplandırılabilir ve kodun yeniden kullanılabilirliği ve bakımı kolaylaştırılır.
+
+\begin{figure}[h]
+\centering
+% \includegraphics{ornek_gorsel.png}
+\caption{Kompozit node örneği ve süreç içerisindeki node'ların bir arada çalışması (Görselde, kompozit node'un süreç içerisinde birden fazla node'u yönettiği ve bu node'ların nasıl bir arada çalıştığı gösterilmelidir)}
+\end{figure}
 
 \subsubsection{Lifecycle Node'lar ve Yönetimi}
-\lipsum[4] % Örnek metin için, gerçek içerikle değiştirin
+Lifecycle node'lar, robotik uygulamaların yaşam döngüsü yönetimini sağlar. Bu sayede, uygulamanın başlangıç, çalışma, duraklatma ve sonlandırma gibi farklı evrelerinde kontrol ve yönetim sağlanır. Lifecycle node'lar, hata yönetimi ve geri kazanım stratejileri için de kullanılabilir.
+
+\begin{figure}[h]
+\centering
+% \includegraphics{ornek_gorsel.png}
+\caption{Lifecycle node'ların yaşam döngüsü evreleri ve yönetimi (Görselde, lifecycle node'ların yaşam döngüsündeki farklı evreler ve bu evrelerin nasıl yönetildiği gösterilmelidir)}
+\end{figure}
 
 \section{DDS (Data Distribution Service) ve QoS (Quality of Service) Parametreleri}
+ROS2, DDS (Data Distribution Service) üzerine kurulmuştur ve bu, ROS2'nin iletişim altyapısının güçlü ve esnek olmasını sağlar. QoS (Quality of Service) parametreleri ise, iletişimin kalitesini ve güvenilirliğini artırarak, robotik uygulamaların performansını optimize etmeye yardımcı olur.
+
 \subsection{DDS ve ROS2 İçin Önemi}
-\lipsum[5] % Örnek metin için, gerçek içerikle değiştirin
+DDS, gerçek zamanlı ve büyük ölçekli sistemlerde veri paylaşımı ve iletişim için kullanılan bir standarttır. ROS2'nin DDS üzerine inşa edilmesi, ROS2'nin ölçeklenebilirliğini, performansını ve güvenliğini artırır.
+\paragraph{DDS'nin İletişim Modeli}
+DDS, yayıncı-abone (publisher-subscriber) iletişim modelini kullanır. Bu modelde, yayıncılar (publisher) belirli bir konu (topic) üzerinde veri yayınlar ve aboneler (subscriber) bu konuya abone olarak yayınlanan verileri alır. Bu sayede, yayıncılar ve aboneler arasında doğrudan bağlantı kurmaya gerek kalmadan, veri paylaşımı ve iletişim sağlanır.
+
+\begin{figure}[h]
+\centering
+% \includegraphics{ornek_gorsel.png}
+\caption{DDS'nin yayıncı-abone iletişim modeli (Görselde, yayıncıların ve abonelerin konular üzerinden nasıl iletişim kurduğunu gösteren bir diyagram kullanılmalıdır)}
+\end{figure}
+
+DDS, ayrıca veri önbellekleme ve keşif gibi özellikler sunarak, büyük ve dinamik sistemlerde iletişimin güvenilirliğini ve esnekliğini artırır. Bu özellikler, özellikle robotik sistemlerde önemlidir, çünkü robotlar genellikle karmaşık ve değişken ortamlarda çalışır ve bu nedenle iletişim altyapısının güçlü ve esnek olması gereklidir.
 
 \subsection{QoS Parametreleri ve Kullanımı}
-\subsubsection{QoS Profilleri ve Ayarları}
-\lipsum[6] % Örnek metin için, gerçek içerikle değiştirin
+QoS (Quality of Service) parametreleri, ROS2 iletişiminin performansını, güvenilirliğini ve özelleştirilebilirliğini artırmaya yönelik olarak kullanılır. QoS parametreleri, iletişim sürecinde kullanılacak kaynakların, veri iletim sürelerinin ve güvenilirlik düzeyinin kontrol edilmesini sağlar.
 
+\subsubsection{QoS Profilleri ve Ayarları}
+QoS profilleri, belirli bir iletişim senaryosu için uygun QoS parametrelerini içeren yapılandırmaları temsil eder. Bu profiller, belirli bir uygulama veya sistem gereksinimine göre özelleştirilebilir ve hızlı bir şekilde uygulanabilir. ROS2, önceden tanımlanmış birkaç QoS profili sunar, ancak kullanıcılar kendi profillerini de oluşturabilir.
+
+\begin{figure}[h]
+\centering
+% \includegraphics{ornek_gorsel.png}
+\caption{QoS profillerinin ROS2 iletişimine nasıl uygulandığı (Görselde, QoS profillerinin ROS2 yayıncılar ve aboneler arasındaki iletişime nasıl etki ettiğini gösteren bir diyagram kullanılmalıdır)}
+\end{figure}
 \subsubsection{QoS ile İletişim Kalitesini Artırma}
-\lipsum[7] % Örnek metin için, gerçek içerikle değiştirin
+QoS parametrelerinin doğru bir şekilde ayarlanması, ROS2 iletişiminin kalitesini ve performansını önemli ölçüde artırabilir. Örneğin, güvenilirlik (reliability) parametresi, iletişimin güvenilirliğini artırmak için kullanılabilir. Bu parametre, veri iletiminin en uygun yöntemini seçerek, veri kaybının önlenmesine veya minimize edilmesine yardımcı olur.
+
+Başka bir örnek olarak, geçmiş (history) parametresi, yayıncıdan gelen eski mesajların saklanmasını ve yönetilmesini sağlar. Bu parametre, abonelerin bağlandıktan sonra yayıncıdan daha önce gönderilmiş olan verilere erişmesine olanak tanır. Bu, abonelerin eski verilere dayalı olarak kararlar almasına ve sistem performansının artırılmasına yardımcı olur.
+
+\begin{figure}[h]
+\centering
+% \includegraphics{ornek_gorsel.png}
+\caption{QoS parametrelerinin ROS2 iletişim kalitesini nasıl etkilediği (Görselde, farklı QoS parametrelerinin yayıncılar ve aboneler arasındaki iletişim kalitesi üzerindeki etkilerini gösteren bir diyagram kullanılmalıdır)}
+\end{figure}
+
+Sonuç olarak, QoS parametrelerinin doğru bir şekilde kullanılması ve ayarlanması, ROS2 iletişim performansını ve güvenilirliğini artırarak, robotik uygulamaların daha verimli ve sağlam hale gelmesine olanak tanır.
+
+\paragraph{İletişim Güvenilirliği ve Performansı}
+QoS parametrelerinin doğru şekilde ayarlanması, ROS2 iletişiminin güvenilirliğini ve performansını önemli ölçüde etkiler. Örneğin, gecikme (latency) ve bant genişliği (bandwidth) gibi parametreler, veri iletiminin hızını ve verimliliğini doğrudan etkiler. Bu parametrelerin doğru bir şekilde seçilmesi ve uygulanması, robotik uygulamaların daha hızlı ve daha güvenilir iletişim sağlamasına yardımcı olur.
+
+Ayrıca, abonelerin yayıncıların gönderdiği verilere istedikleri anda erişebilmesini sağlamak için sıralama (ordering) ve öncelik (priority) gibi parametreler de kullanılabilir. Bu parametreler, yayıncılar ve aboneler arasında gerçekleşen iletişimin daha düzenli ve düzgün hale gelmesine yardımcı olur.
+
+\paragraph{QoS ile Kaynak Kullanımının Optimize Edilmesi}
+QoS parametrelerinin kullanımı, ROS2 sistemi içinde kaynak kullanımını optimize etmek için de önemli bir role sahiptir. Örneğin, veri ömrü (lifespan) parametresi, eski ve artık kullanılmayan verilerin sistemden otomatik olarak temizlenmesini sağlar. Bu sayede, kaynak kullanımı azalır ve sistem performansı artar.
+
+Başka bir örnek olarak, abonelerin ve yayıncıların iletişim hızını düzenlemek için sıklık (frequency) veya tarama (throttle) parametreleri kullanılabilir. Bu parametreler, gereksiz veri trafiğini azaltarak ve sistem kaynaklarının daha verimli kullanılmasını sağlayarak, robotik uygulamaların daha hızlı ve daha düşük enerji tüketimiyle çalışmasına olanak tanır.
