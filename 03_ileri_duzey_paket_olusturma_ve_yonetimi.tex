@@ -1,23 +1,26 @@
 \chapter{İleri Düzey Paket Oluşturma ve Yönetimi}
 
 \section{Paket Oluşturma, Yapılandırma ve Yönetimi}
-\subsection{ROS2 Paketi Oluşturma ve Yapılandırma}
-\subsubsection{Paket Oluşturma ve Gerekli Dosyalar}
-% ROS2 paketi oluşturma adımları ve gerekli dosyaların tanımı
+    \subsection{ROS2 Paketi Oluşturma ve Yapılandırma}
+        \subsubsection{Paket Oluşturma ve Gerekli Dosyalar}
+            ROS2 paketlerini oluşturmak için öncelikle `ros2 pkg create` komutunu kullanırız. Bu komut ile paketimize gerekli dosyalar ve klasörler otomatik olarak oluşturulur. Bu dosyalar arasında `CMakeLists.txt`, `package.xml`, `src` ve `include` gibi önemli yapılandırma ve kaynak dosyaları bulunmaktadır.
 
-\subsubsection{CMakeLists.txt ve package.xml Dosyaları}
-% CMakeLists.txt ve package.xml dosyalarının oluşturulması ve yapılandırılması
+        \subsubsection{CMakeLists.txt ve package.xml Dosyaları}
+            `CMakeLists.txt` dosyası, paketimizin derleme ve bağlantı işlemleri için gerekli yapılandırmaları içerir. Bu dosyada bağımlılıklar, hedefler ve derleme seçenekleri gibi bilgiler yer alır.
 
-\subsection{Paket İçindeki Launch Dosyaları ve Kullanımı}
-\subsubsection{Launch Dosyalarının Oluşturulması ve Yapısı}
-% Launch dosyalarının oluşturulması ve yapılandırılması
+            `package.xml` dosyası ise, paketimizin meta bilgilerini ve bağımlılıklarını içerir. Bu dosyada paket adı, sürümü, lisansı ve yazarları gibi bilgilerin yanı sıra, diğer ROS2 paketleri ile olan bağımlılıklar da belirtilir.
 
-\subsubsection{Paket İçindeki Birden Fazla Node'u Başlatma}
-% Paket içinde birden fazla node'un başlatılması ve yönetimi
+    \subsection{Paket İçindeki Launch Dosyaları ve Kullanımı}
+        \subsubsection{Launch Dosyalarının Oluşturulması ve Yapısı}
+            Launch dosyaları, ROS2 düğümlerini başlatmak ve yönetmek için kullanılır. Launch dosyaları `.launch.py` uzantısıyla oluşturulur ve Python programlama dili kullanılarak yazılır. Bu dosyalar, düğüm yapılandırmalarını ve parametrelerini içerir ve genellikle `launch` klasörü içinde bulunur.
 
-\subsection{ROS2 Paketleri Arasında Bağımlılıklar ve İletişim}
-\subsubsection{Paket Bağımlılıklarının Yönetimi}
-% Paket bağımlılıklarının oluşturulması ve yönetimi
+        \subsubsection{Paket İçindeki Birden Fazla Node'u Başlatma}
+            Launch dosyaları sayesinde, bir paket içinde birden fazla düğümü aynı anda başlatıp yönetebiliriz. Bu işlem, launch dosyasında `Node` sınıfı kullanılarak gerçekleştirilir ve düğümler arasındaki bağımlılıklar ve iletişim ayarları yapılandırılır.
+
+    \subsection{ROS2 Paketleri Arasında Bağımlılıklar ve İletişim}
+        \subsubsection{Paket Bağımlılıklarının Yönetimi}
+            Paketler arasındaki bağımlılıklar, `package.xml` ve `CMakeLists.txt` dosyalarında yönetilir. Paketler arasındaki bağımlılıklar eklenerek, hizmetler ve iletişim kanalları aracılığıyla veri alışverişi sağlanır.
+
 
 \subsubsection{İletişim ve Hizmetlerle Paketler Arasında Veri Alışverişi}
 % Hizmetler ve iletişim kanalları aracılığıyla paketler arasında veri alışverişi
