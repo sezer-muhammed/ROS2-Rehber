@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.7)  19 MAR 2023 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.7)  28 MAR 2023 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -277,7 +277,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 B\"ol\"um 3.
 [10
 
-]) (./04_ros2_guvenlik_sros2.tex
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.61858pt, for example:
@@ -285,19 +285,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
 
-[11]
+[11]) (./04_ros2_guvenlik_sros2.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.61858pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.61858pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
+
+[12]
 B\"ol\"um 4.
-[12
+[13
 
-]) (./05_ros2_ve_python_ile_test_ve_entegrasyon.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13]
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -305,9 +305,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14]
+[14]) (./05_ros2_ve_python_ile_test_ve_entegrasyon.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15]
 B\"ol\"um 5.
-[15
+[16
 
 ]) (./06_ros2_ve_gercek_zamanli_sistemler.tex
 
@@ -317,9 +325,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16]
+[17]
 B\"ol\"um 6.
-[17
+[18
 
 ]) (./07_ileri_duzey_tf2_kullanimi_ve_optimizasyon.tex
 
@@ -329,9 +337,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
+[19]
 B\"ol\"um 7.
-[19
+[20
 
 ]) (./08_ros2_ile_simulasyon_ve_donanim_entegrasyonu.tex
 
@@ -341,9 +349,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
 
-[20]
+[21]
 B\"ol\"um 8.
-[21
+[22
 
 ]) (./09_ileri_duzey_araclar_ve_kullanimlari.tex
 
@@ -353,9 +361,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[22]
+[23]
 B\"ol\"um 9.
-[23
+[24
 
 ]) (./10_ileri_duzey_ros2_uygulamalari_ve_ornek_projeler.tex
 
@@ -365,9 +373,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.61858pt}.
 
-[24]
+[25]
 B\"ol\"um 10.
-[25
+[26
 
 ]) (./11_ozet_ve_sonuc.tex
 
@@ -377,24 +385,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.04742pt}.
 
-[26]
+[27]
 B\"ol\"um 11.
-) [27
+) [28
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3860 strings out of 476024
- 65800 string characters out of 5794017
+ 3858 strings out of 476024
+ 65775 string characters out of 5794017
  1866382 words of memory out of 5000000
- 24262 multiletter control sequences out of 15000+600000
+ 24260 multiletter control sequences out of 15000+600000
  521871 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,77p,542b,406s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,77p,664b,406s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (27 pages, 162502 bytes).
+Output written on main.pdf (28 pages, 164298 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

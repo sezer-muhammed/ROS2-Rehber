@@ -1,36 +1,47 @@
-% 04_ros2_guvenlik_sros2.tex
 \chapter{ROS2 Güvenlik (SROS2)}
+
+ROS2'nin güvenlik çözümü olan SROS2 (Secure ROS2), robotik sistemlerde güvenli iletişim sağlamak için tasarlanmıştır. SROS2, iletişim kanallarını şifreleyerek ve kimlik doğrulama ile yetkilendirme sağlayarak, sistemlerin güvenliğini artırmaktadır.
 
 \section{SROS2 ile Güvenlikli İletişim Sağlama}
 \subsection{SROS2'nin İşlevi ve Avantajları}
-% SROS2'nin ne olduğu ve avantajları hakkında bilgi
-\lipsum[1] % Örnek metin için, gerçek içerikle değiştirin
+SROS2, ROS2 düğümleri arasındaki iletişimi güvence altına almak için kullanılır. Bu güvenlik önlemleri, robotik sistemlerin hassas verilerini ve işlemlerini koruma altına alır. SROS2'nin avantajları şunlardır:
 
+Şifreli iletişim: Veri sızıntılarını ve izinsiz erişimi önlemek için iletişim kanallarında şifreleme kullanır.
+
+Kimlik doğrulama: Düğümler arasındaki iletişimi gerçekleştiren katılımcıların kimliğini doğrular.
+
+Yetkilendirme: İzin kontrolleri sağlayarak, düğümlerin belirli işlemleri gerçekleştirme yeteneğini sınırlar.
 \subsection{SROS2 İle Güvenli İletişim}
-% SROS2 ile güvenli iletişimin nasıl sağlandığına dair bilgi
-\lipsum[2] % Örnek metin için, gerçek içerikle değiştirin
+SROS2, ROS2 düğümleri arasındaki iletişimi güvence altına almak için DDS-Security (Data Distribution Service Security) üzerine kurulmuştur. DDS-Security, şifreleme, kimlik doğrulama ve yetkilendirme sağlayarak, ROS2 düğümleri arasındaki iletişimin güvenliğini sağlar.
 
 \subsubsection{Güvenli İletişim İçin Ayarlar}
-% Güvenli iletişim için gereken ayarlar ve yapılandırma hakkında bilgi
-\lipsum[3] % Örnek metin için, gerçek içerikle değiştirin
-
+Güvenli iletişim sağlamak için, ROS2 düğümleri arasında şifreleme, kimlik doğrulama ve yetkilendirme ayarlarının yapılandırılması gerekir. Bu ayarlar, güvenlik profilleri ve sertifikalar kullanılarak yapılır. Güvenlik profilleri, düğümlerin güvenlik politikalarını ve yapılandırmalarını tanımlar, sertifikalar ise kimlik doğrulama sürecinde kullanılır.
 \subsubsection{SROS2 İle İletişim Örneği}
-% SROS2 ile güvenli iletişim kurma örneği
-\lipsum[4] % Örnek metin için, gerçek içerikle değiştirin
+SROS2 ile güvenli iletişim kurmak için şu adımları izleyin
+
+SROS2 araçlarını kullanarak, güvenlik profilleri ve sertifikalar oluşturun. Bu adım, düğümlerin kimlik bilgilerini ve güvenlik politikalarını tanımlar.
+
+İlgili düğümlerde SROS2 yapılandırmasını etkinleştirin. Bu, düğümlerin güvenlik ayarlarını ve sertifikalarını kullanarak iletişim kurmalarını sağlar.
+
+Şifreleme, kimlik doğrulama ve yetkilendirme ayarlarını uygulayarak, düğümler arasında güvenli iletişimi başlatın. Bu adımda, düğümler arasındaki veri alışverişi şifrelenir ve kimlik doğrulama ve yetkilendirme kullanılarak düğümler arasındaki iletişim sınırlandırılır.
 
 \section{Sertifika Yönetimi ve Güvenlik Politikaları}
 \subsection{Sertifika Oluşturma ve Yönetimi}
-% SROS2 için sertifika oluşturma ve yönetimi hakkında bilgi
-\lipsum[5] % Örnek metin için, gerçek içerikle değiştirin
+SROS2, düğümlerin kimlik doğrulamasını sağlamak için X.509 sertifikalarını kullanır. Sertifikalar, düğümlerin güvenli iletişim için gereken kimlik bilgilerini içerir. SROS2 araçları, sertifika otoritesi (CA) sertifikaları ve düğümlere ait sertifikaları oluşturmak için kullanılabilir. Sertifikalar, güvenlik ayarlarının yapılandırılmasında ve düğümlerin kimlik doğrulamasında kullanılır.
 
 \subsection{Güvenlik Politikaları ve Uygulama}
-% Güvenlik politikalarının tanımlanması ve uygulanması hakkında bilgi
-\lipsum[6] % Örnek metin için, gerçek içerikle değiştirin
+Güvenlik politikaları, ROS2 düğümleri arasındaki iletişimde uygulanacak güvenlik kurallarını tanımlar. Bu politikalar, düğümler arasında hangi veri alışverişinin şifreli olacağını, hangi düğümlerin kimlik doğrulaması yapacağını ve hangi düğümlerin belirli işlemleri gerçekleştirmeye yetkili olduğunu belirler.
 
 \subsubsection{Güvenlik Politikalarını Ayarlama}
-% Güvenlik politikalarını nasıl ayarlayacağınıza dair bilgi
-\lipsum[7] % Örnek metin için, gerçek içerikle değiştirin
+Güvenlik politikalarını ayarlamak için, güvenlik profilleri kullanılır. Güvenlik profilleri, XML dosyaları olarak tanımlanır ve düğümlerin güvenlik politikalarını ve yapılandırmalarını içerir. Güvenlik politikalarını ayarlamak için, düğümlere ait güvenlik profillerini düzenleyerek, şifreleme, kimlik doğrulama ve yetkilendirme ayarlarını değiştirebilirsiniz.
 
 \subsubsection{Güvenlik Politikalarını Uygulama}
-% Güvenlik politikalarının nasıl uygulanacağına dair bilgi
-\lipsum[8] % Örnek metin için, gerçek içerikle değiştirin
+Güvenlik politikalarını uygulamak için, düğümlerin güvenlik profilleri ile çalıştırılması gerekir. Bu, düğümlerin politikalara göre yapılandırılmış güvenlik ayarlarını kullanarak iletişim kurmalarını sağlar. Güvenlik politikalarını uygulamak için şu adımları izleyin:
+
+Düğümlere ait güvenlik profillerini düzenleyerek, şifreleme, kimlik doğrulama ve yetkilendirme ayarlarını belirleyin.
+
+Güvenlik profillerini ve sertifikaları ROS2 düğümlerine uygulayın. Bu, düğümlerin güvenlik politikalarına göre yapılandırılmış iletişim kurmalarını sağlar.
+
+ROS2 düğümlerini güvenlik profilleri ve sertifikalarla başlatın. Bu adımda, düğümler güvenlik politikalarına göre şifreleme, kimlik doğrulama ve yetkilendirme kullanarak iletişim kurarlar.
+
+Güvenlik politikalarının uygulanması, ROS2 düğümleri arasında güvenli iletişim sağlar ve robotik sistemlerin güvenliğini artırır. Bu yaklaşım, hassas verilerin ve işlemlerin korunmasına yardımcı olarak, robotik uygulamaların daha güvenilir ve güvenli hale gelmesine olanak tanır.

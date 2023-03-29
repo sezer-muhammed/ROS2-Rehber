@@ -22,18 +22,23 @@
             Paketler arasındaki bağımlılıklar, `package.xml` ve `CMakeLists.txt` dosyalarında yönetilir. Paketler arasındaki bağımlılıklar eklenerek, hizmetler ve iletişim kanalları aracılığıyla veri alışverişi sağlanır.
 
 
-\subsubsection{İletişim ve Hizmetlerle Paketler Arasında Veri Alışverişi}
-% Hizmetler ve iletişim kanalları aracılığıyla paketler arasında veri alışverişi
+            \subsubsection{İletişim ve Hizmetlerle Paketler Arasında Veri Alışverişi}
+            ROS 2 sistemi içerisinde, paketler arasında veri alışverişi sağlamak için iki temel iletişim mekanizması kullanılır: konular (topics) ve hizmetler (services). Konular, yayıncılar (publishers) ve aboneler (subscribers) arasında asenkron veri iletimi sağlarken, hizmetler ise istemci (client) ve sunucu (server) arasında senkron veri iletimi sağlar.
+            
+            Bunun yanı sıra, daha karmaşık senaryolar için eylemler (actions) adı verilen bir başka iletişim mekanizması kullanılabilir. Eylemler, uzun süreli, önceden tanımlanmış hedeflere yönelik işlemler için kullanılır ve eylem istemcisi ile eylem sunucusu arasında iletişim sağlar.
+            
+            \section{Özel Mesaj, Hizmet ve Eylem Türleri Oluşturma}
+            ROS 2, kullanıcının özel mesaj, hizmet ve eylem türlerini tanımlamasına ve kullanmasına olanak tanır. Bu türler, paketler arasında veri alışverişinde kullanılır ve kullanıcının ihtiyaçlarına göre özelleştirilebilir.
+            
+            \subsection{Özel Mesaj Türleri}
+            Özel mesaj türlerinin tanımlanması, belirli bir paket içerisinde yapılır. Önce, paket içinde "msg" adında bir klasör oluşturulur ve bu klasörde, özel mesaj türlerine karşılık gelen ".msg" uzantılı dosyalar tanımlanır. Bu dosyalar, özel mesaj türünün yapısını ve elemanlarını içerir. ROS 2, özel mesaj türlerini kullanarak paketler arasında veri alışverişinde bulunabilir.
+            
+            \subsection{Özel Hizmet Türleri}
+            Özel hizmet türleri, paketler arasında istemci-sunucu iletişimi sağlamak için kullanılır. Özel hizmet türlerini tanımlamak için, paket içinde "srv" adında bir klasör oluşturulur ve bu klasörde, özel hizmet türlerine karşılık gelen ".srv" uzantılı dosyalar tanımlanır. Bu dosyalar, özel hizmet türünün isteği ve yanıtını içeren yapıları içerir. ROS 2, bu özel hizmet türlerini kullanarak paketler arasında senkron veri alışverişi gerçekleştirir.
+            
+            \subsection{Özel Eylem Türleri}
+            Özel eylem türleri, uzun süreli, önceden tanımlanmış hedeflere yönelik işlemler için kullanılır. Özel eylem türlerini tanımlamak için, paket içinde "action" adında bir klasör oluşturulur ve bu klasörde, özel eylem türlerine karşılık gelen ".action" uzantılı dosyalar tanımlanır. Bu dosyalar, özel eylem türünün hedef, sonuç ve geri bildirim yapılarını içerir. ROS 2, bu özel eylem türlerini kullanarak paketler arasında uzun süreli işlemler gerçekleştirir ve bu işlemler sırasında geri bildirim sağlar.
 
-\section{Özel Mesaj, Hizmet ve Eylem Türleri Oluşturma}
-\subsection{Özel Mesaj Türleri}
-% Özel mesaj türlerinin tanımlanması ve kullanımı hakkında bilgi
-
-\subsection{Özel Hizmet Türleri}
-% Özel hizmet türlerinin tanımlanması ve kullanımı hakkında bilgi
-
-\subsection{Özel Eylem Türleri}
-% Özel eylem türlerinin tanımlanması ve kullanımı hakkında bilgi
-
-
-
+            Özel mesaj, hizmet ve eylem türleri oluşturulduktan sonra, bu türlerin ROS 2 sistemi içinde kullanılabilmesi için paketin bağımlılıkları ve "CMakeLists.txt" dosyası düzenlenmelidir. Bu düzenlemelerle birlikte, özel türler ROS 2 düğümleri arasında veri alışverişi için kullanılabilir hale gelir.
+            
+            Sonuç olarak, ROS 2, paketler arasında veri alışverişi sağlamak için iletişim ve hizmetlerle çalışırken, kullanıcıların özel mesaj, hizmet ve eylem türlerini tanımlayarak ve kullanarak bu alışverişi daha esnek ve özelleştirilebilir hale getirir. Bu özellik, kullanıcıların karmaşık ve özelleştirilmiş robotik uygulamalar geliştirmesine olanak tanır.
