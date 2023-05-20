@@ -1,40 +1,39 @@
-% 05_ros2_ve_python_ile_test_ve_entegrasyon.tex
 \chapter{ROS2 ve Python ile Test ve Entegrasyon}
 
 \section{Birim ve Entegrasyon Testleri Yazma}
 \subsection{Birim Testlerinin Önemi ve Kapsamı}
-Birim testlerinin önemi ve kapsamı hakkında detaylı bilgi.
+Birim testleri, bir yazılımın en küçük işlevsel birimlerinin düzgün bir şekilde çalışıp çalışmadığını kontrol eder. Testler genellikle yazılım geliştirme sürecinin erken aşamalarında, kodun ilk kez yazıldığı anda oluşturulur ve bu, hataların erken ve düşük maliyetle tespit edilmesini sağlar.
 
 \subsection{Python ve ROS2 İle Birim Testleri Oluşturma}
-Python ve ROS2 ile birim testlerinin nasıl oluşturulacağı hakkında detaylı bilgi.
+Python'un "unittest" kütüphanesi, Python ve ROS2 ile birim testleri oluşturmanın temelini sağlar. ROS2'nin içerdiği rclpy kütüphanesi de ROS2 özelliklerinin birim testlerine olanak sağlar.
 
 \subsubsection{Test Süreci ve Kullanılacak Araçlar}
-Test süreci ve kullanılacak araçlar hakkında detaylı bilgi.
+Python ve ROS2 için test süreci, öncelikle testlerin yazılması, ardından bunların bir test koşucusu (örneğin, "unittest" kütüphanesinin içindeki test koşucusu) kullanılarak koşulması ve sonuçların değerlendirilmesi aşamalarını içerir.
 
 \subsubsection{Örnek Birim Test Senaryosu}
-Örnek bir birim test senaryosu ve uygulanması hakkında detaylı bilgi.
+Örnek bir birim test senaryosunda, bir ROS2 düğümünün başlatılması ve bir mesajın yayınlanıp yayınlanmadığının kontrol edilmesi olabilir. Bu, rclpy'nin Node ve Publisher özelliklerinin kullanılmasıyla gerçekleştirilebilir.
 
 \subsection{Entegrasyon Testlerinin Önemi ve Kapsamı}
-Entegrasyon testlerinin önemi ve kapsamı hakkında detaylı bilgi.
+Entegrasyon testleri, bir yazılımın farklı bileşenlerinin birlikte düzgün bir şekilde çalışıp çalışmadığını kontrol eder. Birim testlerinden farklı olarak, entegrasyon testleri genellikle daha karmaşıktır ve genellikle birden fazla bileşenin bir araya gelmesini gerektirir.
 
 \subsection{Python ve ROS2 İle Entegrasyon Testleri Oluşturma}
-Python ve ROS2 ile entegrasyon testlerinin nasıl oluşturulacağı hakkında detaylı bilgi.
+TODO
 
 \subsubsection{Entegrasyon Test Süreci ve Kullanılacak Araçlar}
-Entegrasyon test süreci ve kullanılacak araçlar hakkında detaylı bilgi.
+Entegrasyon test süreci, genellikle birim test sürecine benzer, ancak testler genellikle daha karmaşık olduğu için daha fazla hazırlık ve düşünme gerektirir.
 
 \subsubsection{Örnek Entegrasyon Test Senaryosu}
-Örnek bir entegrasyon test senaryosu ve uygulanması hakkında detaylı bilgi.
+Örnek bir entegrasyon test senaryosu, birden fazla ROS2 düğümünün başlatılması ve bir düğümün diğerine bir mesaj gönderip gönderemediğinin kontrol edilmesi olabilir.
 
 \section{Sürekli Entegrasyon ve Sürekli Dağıtım (CI/CD) Süreçlerinin Uygulanması}
 \subsection{CI/CD'nin Önemi ve Kapsamı}
-CI/CD'nin önemi ve kapsamı hakkında detaylı bilgi.
+CI/CD, yazılımın sürekli olarak test edilmesini ve dağıtılmasını sağlar. Bu, hataların daha hızlı tespit edilmesine ve yazılımın daha hızlı bir şekilde kullanıcılara ulaştırılmasına yardımcı olur.
 
 \subsection{CI/CD Araçları ve Uygulama Süreci}
-CI/CD araçları ve uygulama süreci hakkında detaylı bilgi.
+CI/CD için genellikle Jenkins, Travis CI, CircleCI ve Github Actions gibi araçlar kullanılır. Bu araçlar, yazılımın otomatik olarak test edilmesini ve dağıtılmasını sağlar.
 
 \subsubsection{Sürekli Entegrasyon (CI) İçin Konfigürasyon ve Uygulama}
-Sürekli entegrasyon için konfigürasyon ve uygulama hakkında detaylı bilgi.
+Sürekli entegrasyon, her kod değişikliği sonrası yazılımın otomatik olarak test edilmesini içerir. Bunun için bir CI aracının doğru bir şekilde konfigüre edilmesi gereklidir.
 
 \subsubsection{Sürekli Dağıtım (CD) İçin Konfigürasyon ve Uygulama}
-Sürekli dağıtım için konfigürasyon ve uygulama hakkında detaylı bilgi.
+Sürekli dağıtım, her başarılı test sonrası yazılımın otomatik olarak dağıtılmasını içerir. Bunun için bir CD aracının doğru bir şekilde konfigüre edilmesi gereklidir.

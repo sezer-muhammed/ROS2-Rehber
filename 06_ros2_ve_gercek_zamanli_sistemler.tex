@@ -1,31 +1,30 @@
-% 06_ros2_ve_gercek_zamanli_sistemler.tex
 \chapter{ROS2 ve Gerçek Zamanlı Sistemler (Real-Time)}
 
 \section{Gerçek Zamanlı Sistemlerin Önemi ve Gereklilikleri}
 \subsection{Gerçek Zamanlı Sistemlerin Tanımı ve Özellikleri}
-Gerçek zamanlı sistemlerin tanımı, özellikleri ve önemi hakkında detaylı bilgi.
+Gerçek zamanlı sistemler, belirli bir süre içinde işlem yapma ve sonuç verme gerekliliği olan sistemlerdir. Bu sistemler, genellikle kontrol sistemleri, telekomünikasyon, endüstriyel otomasyon ve robot teknolojilerinde yaygın olarak kullanılır. Gerçek zamanlı sistemlerin performansı, sadece işlemlerin doğruluğuyla değil, aynı zamanda işlemlerin zamanında tamamlanmasıyla da belirlenir.
 
 \subsection{Gerçek Zamanlı Sistem Gereklilikleri}
-Gerçek zamanlı sistemlerin temel gereklilikleri ve bu gerekliliklerin sağlanması hakkında detaylı bilgi.
+Gerçek zamanlı sistemlerin temel gereklilikleri, belirlenmiş bir zaman çerçevesinde veri işleme, düşük gecikme süreleri ve yüksek zaman duyarlılığı içerir. Sistem, belirtilen süre zarfında bir yanıt vermek zorundadır, aksi takdirde sistemin başarısız olduğu kabul edilir.
 
 \subsubsection{Zaman Kısıtlamaları ve Öncelikler}
-Zaman kısıtlamaları, öncelikler ve bunların gerçek zamanlı sistemlerdeki önemi hakkında detaylı bilgi.
+Gerçek zamanlı sistemlerde, belirli işlemler belirlenmiş bir zaman sınırı içinde tamamlanmalıdır. Ayrıca, belirli işlemler genellikle diğerlerinden daha yüksek önceliğe sahip olacak şekilde düzenlenir. Bu öncelikler, işlemlerin zamanında tamamlanmasını sağlamak için kullanılır.
 
 \subsubsection{Kaynak Yönetimi ve Planlama}
-Gerçek zamanlı sistemlerde kaynak yönetimi ve planlama hakkında detaylı bilgi.
+Gerçek zamanlı sistemler, kaynakları etkin bir şekilde yönetmek ve işlemleri planlamak için karmaşık algoritmalar kullanır. Kaynaklar, genellikle belirli bir önceliğe göre tahsis edilir ve planlama, işlemlerin zamanında tamamlanmasını sağlamak için kullanılır.
 
 \section{ROS2 ve Gerçek Zamanlı Performans İyileştirmeleri}
 \subsection{ROS2'nin Gerçek Zamanlı Özellikleri}
-ROS2'nin gerçek zamanlı sistemlere yönelik özellikleri ve avantajları hakkında detaylı bilgi.
+ROS2, gerçek zamanlı sistemler için bir dizi özellik sunar. Bu özellikler arasında, belirli işlemler için öncelik ayarları, yüksek performanslı iletişim için DDS (Data Distribution Service) desteği ve gelişmiş kaynak yönetimi bulunur.
 
 \subsection{ROS2 Gerçek Zamanlı Performans İyileştirmeleri}
-ROS2 gerçek zamanlı performans iyileştirmeleri ve uygulanması hakkında detaylı bilgi.
+ROS2, gerçek zamanlı performansını iyileştirmek için bir dizi mekanizma sunar. Bunlar arasında, işlem önceliklerini düzenleyen ve belirli işlemlerin zamanında tamamlanmasını sağlayan gerçek zamanlı işletim sistemi (RTOS) desteği bulunur.
 
 \subsubsection{Gerçek Zamanlı İletişim ve DDS}
-Gerçek zamanlı iletişim için ROS2 ve DDS kullanımı hakkında detaylı bilgi.
+ROS2, gerçek zamanlı iletişim için DDS'yi kullanır. DDS, genellikle gerçek zamanlı sistemler için yüksek performanslı veri dağıtımı sağlar ve düşük gecikme süreleri ve yüksek verimlilik sunar.
 
 \subsubsection{Gerçek Zamanlı İşlemler ve Ayarlar}
-Gerçek zamanlı işlemler ve performansı etkileyen ROS2 ayarları hakkında detaylı bilgi.
+ROS2, gerçek zamanlı işlemler için bir dizi ayar sunar. Bu ayarlar, işlem önceliklerini düzenlemeyi, işlem zamanlayıcıları ayarlamayı ve belirli işlemlerin zamanında tamamlanmasını sağlamak için gerekli kaynakları tahsis etmeyi içerir.
 
 \subsubsection{ROS2 Gerçek Zamanlı Uygulama Örneği}
-ROS2 ile gerçek zamanlı bir uygulama örneği ve uygulanması hakkında detaylı bilgi.
+ROS2 ile gerçek zamanlı bir uygulama örneği olarak, bir robotun hareketlerini kontrol eden bir sistem verilebilir. Bu sistemde, robotun hareketleri belirli bir zaman çerçevesinde düzgün bir şekilde gerçekleştirilmeli, aksi takdirde robotun güvenli ve etkin bir şekilde işlemesi mümkün olmayacaktır.
